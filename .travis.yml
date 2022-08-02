@@ -9,10 +9,10 @@ before_install:
   - git clone https://github.com/Microsoft/vcpkg.git
   - cd vcpkg
   - powershell ./bootstrap-vcpkg.sh
-  - powershell ./vcpkg integrate install
-  - powershell ./vcpkg update
-  - powershell ./vcpkg install curl
-  - powershell ./vcpkg install cryptopp
+  - vcpkg integrate install
+  - vcpkg update
+  - vcpkg install curl
+  - vcpkg install cryptopp
 script:
   - cmake --configure .
   - cmake --build . --config Release
