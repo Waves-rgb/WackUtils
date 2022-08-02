@@ -1,15 +1,18 @@
 language: cpp
 compiler: clang
 os: windows
+arch: amd64
+
 python: 3.8
+
 before_install:
   - git clone https://github.com/Microsoft/vcpkg.git
   - cd vcpkg
-  - ./bootstrap-vcpkg.sh
-  - ./vcpkg integrate install
-  - ./vcpkg update
-  - ./vcpkg install curl
-  - ./vcpkg install cryptopp
+  - powershell ./bootstrap-vcpkg.sh
+  - powershell ./vcpkg integrate install
+  - powershell ./vcpkg update
+  - powershell ./vcpkg install curl
+  - powershell ./vcpkg install cryptopp
 script:
   - cmake --configure .
   - cmake --build . --config Release
