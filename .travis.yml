@@ -2,6 +2,12 @@ language: cpp
 compiler: clang
 os: windows
 python: 3.8
+before_install:
+  - git clone https://github.com/Microsoft/vcpkg.git
+  - cd vcpkg
+  - bootstrap-vcpkg.sh
+  - vcpkg integrate install
+  - vcpkg update
 install:
   - vcpkg install curl
   - vcpkg install cryptopp
