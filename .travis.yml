@@ -1,0 +1,7 @@
+language: cpp
+compiler: clang
+os: windows
+python: 3.8
+script:
+  - cmake --build . --config Release
+  - ctest --output-on-failure
