@@ -15,37 +15,37 @@ namespace WackUtils::encryption {
 			std::string privateKey;
 		};
 
-		/// @brief Generates a public and private key pair.
+		/// Generates a public and private key pair.
 		/// @param keySize The size of the key to generate (defaulted at 2048).
 		/// @returns A key pair containing the public and private keys.
 		keypair generateKeyPair(int keySize = 2048);
 
-		/// @brief Encrypts a string using a public key.
+		/// Encrypts a string using a public key.
 		/// @param publicKey The public key to use.
 		/// @param plaintext The string to encrypt.
 		/// @returns The encrypted string.
 		std::string encrypt(const std::string& message, const CryptoPP::PublicKey &publicKey);
 
-		/// @brief Decrypts a string using a private key.
+		/// Decrypts a string using a private key.
 		/// @param privateKey The private key to use.
 		/// @param ciphertext The string to decrypt.
 		/// @returns The decrypted string.
 		std::string decrypt(const std::string& message, const CryptoPP::PrivateKey &privateKey);
 
-		/// @brief Converts a keypair to 2 strings.
+		/// Converts a keypair to 2 strings.
 		/// @param keypair The keypair to convert.
 		/// @returns A pair of strings, containing the public and private keys.
 		keypair stringify(CryptoPP::RSA &keypair);
 	}
 	namespace AES {
-		/// @brief Encrypts a string using a key.
+		/// Encrypts a string using a key.
 		/// @param key The key to use.
 		/// @param plaintext The string to encrypt.
 		/// @param keySize The size of the key to use (defaulted at 512).
 		/// @returns The encrypted string.
 		std::string encrypt(const std::string& message, const std::string& key, int keySize = 512);
 
-		/// @brief Decrypts a string using a key.
+		/// Decrypts a string using a key.
 		/// @param key The key to use.
 		/// @param ciphertext The string to decrypt.
 		/// @param keySize The size of the key to use (defaulted at 512).

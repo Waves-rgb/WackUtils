@@ -7,7 +7,7 @@
 //     life a little easier for me     \\
 // ----------------------------------- \\
 // Language: C++				       \\
-// Last Updated: 8/1/2022			   \\
+// Last Updated: 8/2/2022			   \\
 // Target Platform: Windows     	   \\
 // ----------------------------------- \\
 // Libraries in use:				   \\

@@ -13,7 +13,7 @@ set(CMAKE_CXX_STANDARD 20)
     add_library(WackUtils STATIC ${srcFiles})
 
     # External libraries {
-        find_package(cryptopp REQUIRED)
+        find_package(cryptopp CONFIG REQUIRED)
         find_package(CURL CONFIG REQUIRED)
         target_link_libraries(WackUtils PRIVATE CURL::libcurl cryptopp-static)
     # }

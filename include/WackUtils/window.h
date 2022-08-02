@@ -21,49 +21,48 @@ namespace WackUtils {
 
 	typedef std::function<void(HWND)> windowFilter_t;
 
-	/// hookWndProc - Hooks the window procedure of a window.
-	/// @brief Hooks a window's WndProc function.
+	/// Hooks the window procedure of a window.
 	/// @param wnd The window to hook.
 	/// @param newWndProc The new WndProc function.
 	/// @return Returns a struct containing the success and old WndProc function.
 	hookWndProcReturn_t hookWndProc(HWND wnd, WNDPROC &newWndProc);
 
-	/// getWindowName gets and returns a window's title.
+	/// Gets and returns a window's title.
 	/// @param wnd The window to get the title of.
 	/// @return The title of the window.
 	std::string getWindowName(HWND wnd);
 
-	/// setWindowFrame - Sets the window frame of a window.
+	/// Sets the window frame of a window.
 	/// @param wnd The window to set the frame of.
 	/// @param frame The frame to set.
 	/// @returns True if the frame was set otherwise false.
 	bool setWindowFrame(HWND wnd, windowFrameInfo_t pos);
 
-	/// getWindowFrame - Gets the window frame of a window.
+	/// Gets the window frame of a window.
 	/// @param wnd The window to get the frame of.
 	/// @returns The window frame otherwise nullptr.
 	windowFrameInfo_t getWindowFrame(HWND wnd);
 
-	/// setWindowVisibility - Sets the visibility of a window.
+	/// Sets the visibility of a window.
 	/// @param wnd The window to set the visibility of.
 	/// @param visible True to make the window visible otherwise false.
 	void setWindowVisible(HWND wnd, bool visible);
 
-	/// isWindowVisible - Checks if a window is visible.
+	/// Checks if a window is visible.
 	/// @param wnd The window to check.
 	/// @returns True if the window is visible otherwise false.
 	bool isWindowVisible(HWND wnd);
 
-	/// getWindowClass - Gets the class name of a window.
+	/// Gets the class name of a window.
 	/// @param wnd The window to get the class name of.
 	/// @returns The class name of the window.
 	std::string getWindowClass(HWND wnd);
 
-	/// getWindows - Returns a list of all windows.
+	/// Returns a list of all windows.
 	/// @returns A vector of window handles.
 	std::vector<HWND> getWindows();
 
-	/// findWindows - Returns a list of all windows that match a predicate.
+	/// Returns a list of all windows that match a predicate.
 	/// @param predicate The predicate to match.
 	/// @returns A vector of window handles.
 	std::vector<HWND> findWindows(const windowFilter_t& predicate);
