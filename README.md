@@ -1,5 +1,5 @@
 # WackUtils
-[Build status](https://app.travis-ci.com/Waves-rgb/WackUtils.svg)
+![Build status](https://app.travis-ci.com/Waves-rgb/WackUtils.svg)
 
 A collection of useful C++ functions & methods, I commonly use, so I don't need to re-implement them across projects.
 
